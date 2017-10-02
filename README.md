@@ -1,2 +1,0 @@
-# GLGit
-Un dépôt git
