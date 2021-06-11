@@ -5,6 +5,7 @@
 #include "liste.h"
 #define MAX 3
 
+/*Liste des fonctions à utiliser */
 void afficheMenu();
 void saisie(liste);
 void affichage(liste);
