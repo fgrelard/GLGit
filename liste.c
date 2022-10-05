@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "liste.h"
 #include "pathway.h"
+#include "pathway.h"
+#include "pathway.h"
 
 struct element {
     struct element *next;
