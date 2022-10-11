@@ -10,6 +10,9 @@ struct pathway {
 
 ptr_pathway creerpathway() {
   ptr_pathway voie = (ptr_pathway) malloc (sizeof(struct pathway));
+  voie->nom = NULL;
+  voie->taille = 0;
+  voie->tab = NULL;
   return voie;
 }
 
@@ -31,16 +34,17 @@ void saisie_voie(ptr_pathway voie) {
 void affichage_voie(ptr_pathway voie) {
   int i;
   printf("-------------\n");
-  printf("Nom voie : %s, taille : %d\n", voie->nom, voie->taille);
-  if (voie->taille==0) printf("Le tableau est vide, veuillez le remplir.\n");
-  else {
-    for (i=0; i<voie->taille; i++) {   
+  if (voie->taille==0 || voie == NULL) {
+    printf("Le tableau est vide, veuillez le remplir.\n");
+  } else {
+    printf("Nom voie : %s, taille : %d\n", (voie->nom == NULL) ? "NULL" : voie->nom, voie->taille);
+    for (i=0; i < voie->taille; i++) {
       affiche(voie->tab[i]);
     }
   }
   printf("-------------\n");
 }
-			     
+
 void ouvrir_voie(ptr_pathway voie, FILE* fichier) {
   char *_nom;
   int poids;
