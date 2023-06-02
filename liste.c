@@ -10,7 +10,7 @@ struct element {
 
 liste creerliste() {
     liste l = (liste) malloc (sizeof(struct element));
-    l->next=NULL;
+   
     l->contenu=(void *) malloc (sizeof(void *));
     return l;
 }
